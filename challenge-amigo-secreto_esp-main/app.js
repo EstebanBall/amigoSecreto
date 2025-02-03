@@ -10,28 +10,39 @@ if (amigo.value == ""){
 
     Personas.push(amigo.value);
 
-    console.log(amigo);
-
-    console.log(Personas);
+    mostrarlista(amigo.value);
 
     amigo.value = "";
-
-    mostrarlista(amigo.value);
 }
 }
 
-function mostrarlista(){
+function mostrarlista(amigo){
+lista = document.getElementById("listaAmigos");
+let nuevo = document.createElement("li");
+nuevo.textContent = amigo;
+lista.appendChild(nuevo);
+}
+
+
+function sortearAmigo() {
+
+let numerox =  Math.floor(Math.random()*(Personas.length));
 
 lista = document.getElementById("listaAmigos");
-lista.value = Personas[NumAmigos];
-NumAmigos++;
+lista.style.display = "none";
 
-
+let result = document.getElementById("resultado");
+let resultx = document.createElement("li");
+resultx.textContent = `El amigo secreto es: ${Personas[numerox]}`;
+result.appendChild(resultx);
 
 }
+
+
 let Personas = [];
 let amigo;
 let NumAmigos = 0;
 let lista;
+
 
 
