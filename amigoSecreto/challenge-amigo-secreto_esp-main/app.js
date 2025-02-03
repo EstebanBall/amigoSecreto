@@ -33,7 +33,11 @@ lista.style.display = "none";
 
 let result = document.getElementById("resultado");
 let resultx = document.createElement("li");
+<<<<<<< HEAD:challenge-amigo-secreto_esp-main/app.js
 resultx.textContent = `El amigo secreto es: ${Personas[numerox]}`;
+=======
+resultx.textContent = Personas[numerox];
+>>>>>>> 6f80b1c60e03285edf843ad2a9760a9aa06a8b4e:amigoSecreto/challenge-amigo-secreto_esp-main/app.js
 result.appendChild(resultx);
 
 }
